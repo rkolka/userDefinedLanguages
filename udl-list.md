@@ -1,3 +1,4 @@
+### UDL Definitions
 
 | Name | Description | Author |
 |------|-------------|-------:|
@@ -31,6 +32,8 @@
 | [ArcInfo AML](./UDLs/ArcInfoAML_byJakobNisell.xml) | ArcInfo AML | Jakob Nisell |
 | [Aria templates](./UDLs/AriaTemplates_themeBespin_byAriaTemplates.xml) | Aria templates | [Aria templates team](https://github.com/ariatemplates/editors-tools/tree/master/notepad%2B%2B) |
 | [Aria templates](./UDLs/AriaTemplates_themeStandard_byAriaTemplates.xml) | Aria templates | [Aria templates team](https://github.com/ariatemplates/editors-tools/tree/master/notepad%2B%2B) |
+| [ArubaOS](./UDLs/ArubaOS-16.10_byMaiKiMax94.xml) | ArubaOS 16.10 | MaiKiMax94 |
+| [AOS CX](./UDLs/AOS-CX-10.09_byMaiKiMax94.xml) | AOS-CX 10.09 | MaiKiMax94 |
 | [Asterisk Config](./UDLs/AsteriskConfig_byBrotherGabriel-Marie.xml) | Asterisk Config | Brother Gabriel-Marie |
 | [Asterisk Extension Language (AEL)](./UDLs/AsteriskExtensionLanguage-AEL_by-eyzel.xml) | Asterisk Extension Language (AEL) | eyzel |
 | [Asterisk Sys Config](./UDLs/AsteriskSys_byBrotherGabriel-Marie.xml) | Asterisk Sys Config | Brother Gabriel-Marie |
@@ -64,6 +67,7 @@
 | [DCL](./UDLs/DCL_by-wolfxx.xml) | DCL | Wolfgang Walhütter |
 | [DML / Gembase](./UDLs/DML-Gembase_byDubMatrix.xml) | DML / Gembase | DubMatrix |
 | [DNS Zone](./UDLs/DNS-Zone_byJeremyLaidman.xml) | DNS Zone | Jeremy Laidman |
+| [Dart](./UDLs/Dart_by_thiagovscoelho.xml) | Dart | Thiago Coelho |
 | [Datcom (input and output)](./UDLs/DatcomIO_by_StuartBowman.xml) | Datcom (input and output) | Stuart Bowman |
 | [Delphi Forms](./UDLs/DelphiForms_by-ewgbel.xml) | Delphi Forms | Ewgenij Belzmann |
 | [DinkC](./UDLs/DinkC_by-sparrowhawk76.xml) | DinkC | Y.V. |
@@ -76,8 +80,7 @@
 | [Easytrieve Plus](./UDLs/EasytrievePlus_byThomasAglassinger.xml) | Easytrieve Plus | thomas.aglassinger |
 | [EisenScript](./UDLs/EisenScript_bySygwindFeamir.xml) | EisenScript | Sygwind Feamir |
 | [Elf](./UDLs/Elf_byMarkkobo.xml) | Elf | Markkobo |
-| [Email header](./UDLs/Email_header.xml) | Email header | PeterFisk |
-| [Enterprise Generation Language](./UDLs/EGL-EnterpriseGenerationLanguage_byKoen.xml) | Enterprise Generation Language | Koen |
+| [Email header](./UDLs/Emailheader_byPeterFisk.xml) | Email header | PeterFisk |
 | [Erlang](./UDLs/erlang_byMikeKaganski.xml) | Erlang | mikekaganski |
 | [Essbase Suite](./UDLs/EssbaseSuite_byCelvinKattookaran.xml) | Essbase Suite | Celvin Kattookaran |
 | [Excel formulas](./UDLs/ExcelForumlas-xlf_byDickKusleika.xml) | Excel formulas | [Dick Kusleika](http://www.dailydoseofexcel.com/archives/2010/09/29/formula-editor-in-notepad/) |
@@ -102,6 +105,7 @@
 | [GameMonkey](./UDLs/GameMonkey_byJanSchreiber.xml) | GameMonkey | janschreiber |
 | [Gherkin](./UDLs/Gherkin_byFrankRalf.xml) | Gherkin | [Frank Ralf](https://github.com/nakohdo/NPP.Gherkin) |
 | [Gnuplot](./UDLs/Gnuplot_byJohanWild.xml) | Gnuplot | Johan Wild |
+| [Gnuplot (with Folding)](./UDLs/gnuplot_2023.xml) | Gnuplot (with Folding) | Alexander Stangl |
 | [Google Go (syntax and auto-completion)](./UDLs/go_byAnthonyStarks.xml) | Google Go (syntax and auto-completion) | Anthony Starks |
 | [Google Protocol Buffers](./UDLs/GoogleProtocolBuffers-GPB_byBradWehmeier.xml) | Google Protocol Buffers | Brad Wehmeier |
 | [GPD](https://github.com/SinghRajenM/GPD_UDL/blob/master/UDL/GPD.byRajendraSingh.xml) | UDL for Generic Printer Description | [Rajendra Singh](https://github.com/SinghRajenM) |
@@ -137,6 +141,8 @@
 | [Log for DarkMode](./UDLs/Log_darkMode_byS0UGATA.xml) | Log syntax highlighter for Dark Mode | [Sougata Bhattacharya](https://github.com/S0UGATA) |
 | [Lotus Script](./UDLs/LotusScript_byUdoJunghans.xml) | Lotus Script | Udo Junghans |
 | [Loyc Expression Syntax](./UDLs/LoycExpressionSyntax-les_Dark_byDavidPiepgrass.xml) | Loyc Expression Syntax (version for dark theme) | David Piepgrass |
+| [Magpie](./UDLs/Magpie_bySilectis.udl.xml) | This package provides syntax highlighting for the domain specific language of Mapgie, a data engineering product created by Silectis.
+ | Silectis, Inc |
 | [MEL for Autodesk Maya](./UDLs/MEL_AutodeskMaya_NeilRHagre.xml) | MEL for Autodesk Maya | Neil r. Hagre |
 | [MQL4](./UDLs/MQL4_byMichaelMargolese.xml) | MQL4 | Michael Margolese |
 | [MSC-Adams_Car](./UDLs/MSC-adams_car_by_ARRK.xml) | MSC-Adams/Car | Alexander Recknagel ARRK |
@@ -166,6 +172,8 @@
 | [NetInstall](./UDLs/NetInstall_bySimonNeitzel.xml) | NetInstall | Simon Neitzel |
 | [NetLogo](./UDLs/NetLogo_byMattDurak.xml) | NetLogo | Matt Durak |
 | [Netcool Rules](./UDLs/Netcool_Rules_byJessPetty.xml) | Netcool Rules | Jess Petty |
+| [NppExec](./UDLs/NppExec_themeDefault_byAndreasHeim.xml) | NppExec plugin scripting language | Andreas Heim |
+| [NppExec (Material theme)](./UDLs/NppExec_themeMaterial_byAndreasHeim.xml) | NppExec plugin scripting language | Andreas Heim |
 | [Nuke](./UDLs/Nuke_byMichalM.xml) | Nuke | Michal M |
 | [OBMM Sxript](./UDLs/OBMM-Script_byAnonymous_in2006.xml) | OBMM Sxript | Posted 09-2006 |
 | [Occam2](./UDLs/Occam2_byWilliamLuitje.xml) | Occam2 | William Luitje |
@@ -204,12 +212,11 @@
 | [R2RML](./UDLs/R2RML_byFranckMichel.xml) | R2RML | Franck Michel |
 | [RAPID](./UDLs/RAPID_byDanVenema.xml) | RAPID | Dan Venema |
 | [REXX (several dialects), with autocompletion](./UDLs/REXX-SeveralDialects_byGertMassheimer.xml) | REXX (several dialects), with autocompletion | Gert Massheimer |
-| [REXX (for TSO/E), with autocompletion](./UDLs/REXX_TSOE_byMadan.xml) | REXX (for TSO/E), with autocompletion | Madan Kumar | 
+| [REXX (for TSO/E), with autocompletion](./UDLs/REXX_TSOE_byMadan.xml) | REXX (for TSO/E), with autocompletion | Madan Kumar |
 | [RPM spec files](./UDLs/RPM-SpecFiles_byMatthewKruer.xml) | RPM spec files | Matthew Kruer |
 | [RTF Rich Text Format](./UDLs/RichText-RTF_byFrankRalf.xml) | RTF Rich Text Format | [Frank Ralf](https://github.com/nakohdo/NPP.RTF) |
 | [Rebol](./UDLs/Rebol_byMasaruYamabashi.xml) | Rebol | Masaru Yamabashi |
 | [RenderMan Shading Language &amp; RIB](./UDLs/RenderMan-RSL_byStefanGustavson.xml) | RenderMan Shading Language &amp; RIB | Stefan Gustavson |
-| [RenderMan Shading Language v2 autocompetion file](./UDLs/RenderMan-RSL_by-focus_gfx.xml) | RenderMan Shading Language v2 autocompetion file | focus_gfx |
 | [Rules Language](./UDLs/Rules_Language_byNimadDeshpande.xml) | Rules Language | Nimad Deshpande |
 | [Robotframework](./UDLs/vkosuri_lang-robot.xml) | Robotframework with autocompletion | vkosuri |
 | [SAP NetWeaver IdM language](./UDLs/SAP-NetWeaver-IdM-v7p1_byFrankBuchholz.xml) | SAP NetWeaver IdM language | Frank Buchholz |
@@ -244,9 +251,10 @@
 | [Structured text for PLC programming (B&amp;R controllers)](./UDLs/StructuredText-PLC-B-R_byBradleyBaber.xml) | Structured text for PLC programming (B&amp;R controllers) | Bradley Baber |
 | [SubRip](./UDLs/SubRip_byAndreyEfremov.xml) | SubRip | Andrey Efremov |
 | [Substation Alpha format](./UDLs/SubStation_Alpha_byAndrewMiller.xml) | Substation Alpha format | Andrew Miller |
+| [Substation Alpha format](./UDLs/Substation_alpha_subtitles_byJackyHE.xml) | Substation Alpha Subtitles | Jacky HE |
 | [Susan](./UDLs/Susan_byMahderGebremedhin.xml) | Susan | Mahder Gebremedhin |
 | [System Verilog 1](./UDLs/SystemVerilog1_byKapilPatel.xml) | System Verilog 1 | Kapil Patel |
-| [SystemRDL  2.0](./UDLs/SystemRDL2_bykrcb197.xml) | SystemRDL 2.0 | Keith Brady |
+| [SystemRDL  2.0](./UDLs/SystemRDL2_byKeithBrady.xml) | SystemRDL 2.0 | Keith Brady |
 | [T-SQL (MS Server 2008R2)](./UDLs/T-SQL-MSServer2008r2_bySergeyIvanov.xml) | T-SQL (MS Server 2008R2) | Sergey Ivanov |
 | [TableauDesktop](./UDLs/TableauDesktop_bySP3NGL3R.xml) | TableauDesktop | SP3NGL3R |
 | [TACL](./UDLs/TACL_byAdamWoofrom.xml) | TACL | Adam Woolfrom |
@@ -258,7 +266,7 @@
 | [TexCnc](./UDLs/TexCnc_by-fixus971.xml) | TexCnc | fixus971 |
 | [Thrift](./UDLs/thrift_by-mail507.xml) | Thrift | mail507 |
 | [Tiny Fugue](./UDLs/TinyFugue_byYrwin.xml) | Tiny Fugue | Yrwin |
-| [TNT](./UDLs/TNT_phylogenetics.udb.xml) | [TNT](https://cladistics.org/tnt/) | [Martin R. Smith](https://github.com/ms609/) |
+| [TNT](./UDLs/TNT_phylogenetics.xml) | [TNT](https://cladistics.org/tnt/) | [Martin R. Smith](https://github.com/ms609/) |
 | [Todo.txt](./UDLs/TodoDotTxt_byTimDrub.xml) | Todo.txt | Tim Drub |
 | [TOML](./UDLs/TOML_byTimendum.xml) | Tom's Obvious, Minimal Language | Timendum |
 | [TradeStation Easy Language](./UDLs/TradeStation_EasyLanguage_byCharlesToepfer.xml) | TradeStation Easy Language | Charles Toepfer |
@@ -274,7 +282,6 @@
 | [Visual DataFlex](./UDLs/Visual_DataFlex_byBernhardVeit.xml) | Visual DataFlex | Bernhard Veit |
 | [Visual FoxPro](./UDLs/VisualFoxPro_by-jgoh.xml) | Visual FoxPro | José Guillermo Ortiz Hernández |
 | [Visual Studio csproj vbproj vstemplate files](./UDLs/VisualStudioProject_byCADbloke.xml) | Visual Studio csproj vbproj vstemplate files | [CADbloke](https://gist.github.com/CADbloke/7478607) |
-| [WLanguage v15 and WDScript (plugin too)](./UDLs/WLangLexer_by-tpruvot.xml) | WLanguage v15 and WDScript (plugin too) | [tpruvot](https://sourceforge.net/projects/wdscript/files/Syntax%20Highlighting/WDScript%202.5%20Notepad%2B%2B%20Syntax%20File/) |
 | [WSH Panel Mod](./UDLs/JScript-WSH-PanelMod_byLSI-N.xml) | WSH Panel Mod | LSI N |
 | [Wavefront OBJ](./UDLs/Wavefront-OBJ_by-aperezm.xml) | Wavefront OBJ | aperezm |
 | [WebFOCUS](./UDLs/WebFOCUS_by-thomas-aglassinger.xml) | WebFOCUS | thomas.aglassinger |
@@ -302,7 +309,8 @@
 | [vislcg3](./UDLs/vislcg3_by-ginlennon.xml) | vislcg3 | M A |
 | [YANG](./UDLs/yang_by-gribok.xml) | YANG | [gribok](https://github.com/gribok) |
 | [YARA](./UDLs/YARA_byM0N4.xml) | YARA | [m0n4](https://github.com/m0n4) |
-| [ZPL](./UDLs/ZPL_Zebra_Printing_Language.xml) | Zebra Printing Language | AWWOLF |
+| [Zig](./UDLs/zig_by-tgschultz.xml) | Zig | [tgschultz](https://github.com/tgschultz/Npp-ziglang-UDL) |
+| [ZPL](./UDLs/Zebra_Printing_Language.xml) | Zebra Printing Language | AWWOLF |
 | [Excel formulas](./UDLs/ExcelFormula_byOlivierMarche.xml) | Excel formulas | [Olivier Marché](https://github.com/OlivierMarche)
 | [Excel formulas (Dark)](./UDLs/ExcelFormula_ThemeDark_byOlivierMarche.xml) | Excel formulas (Dark theme) | [Olivier Marché](https://github.com/OlivierMarche)
 | [AMXX 1.8.3](./UDLs/AMXX_1.8.3_OciXCrom.xml) | AMXX 1.8.3 | [OciXCrom](https://github.com/OciXCrom)
@@ -310,3 +318,16 @@
 | [Amiga_E_dark](./UDLs/Amiga_E_dark_bydmcoles.xml) | Amiga E (Dark version)| [dmcoles](https://github.com/dmcoles) |
 | [XC=BASIC 3](./UDLs/xcbasic3_byAlanBourke.xml) | XC=BASIC 3 syntax highlighting| Alan Bourke |
 | [Fortinet Fortigate](./UDLs/Fortinet_FortiOS_FGT_by_DPBarbosa.xml) | Fortinet Fortigate syntax highlighting| Danilo Padula Barbosa |
+| [PowerFx_PowerAppsStyle](./UDLs/PowerFx_PowerAppsStyle.xml) | Low-code programming language used in Power Apps| David Nourie |
+| [RISC-V](./UDLs/RISCV-Light_byAidanDempsey.xml) | RISC-V Assembly Language | Aidan Dempsey |
+
+### Auto-Completion Definitions
+
+| Name | Description | Author |
+|------|-------------|-------:|
+| [Amiga_E](./autoCompletions/Amiga_E_bydmcoles.xml) | Amiga E | [dmcoles](https://github.com/dmcoles) |
+| [Amiga_E_dark](./autoCompletions/Amiga_E_dark_bydmcoles.xml) | Amiga E (Dark version)| [dmcoles](https://github.com/dmcoles) |
+| [DAX](./autoCompletions/DAX_bySaschaKasper.xml) | DAX Data Visualization (Microsoft Power BI) | Sascha D. Kasper |
+| [RenderMan Shading Language v2 autocompetion file](./autoCompletions/RenderMan-RSL_by-focus_gfx.xml) | RenderMan Shading Language v2 autocompetion file | focus_gfx |
+| [Robotframework](./autoCompletions/vkosuri-robotframework.xml) | Robotframework with autocompletion | vkosuri |
+| [Smartsheet](./autoCompletions/smartsheet_byKevinDickinson.xml) | Smartsheet | Kevin Dickinson |
