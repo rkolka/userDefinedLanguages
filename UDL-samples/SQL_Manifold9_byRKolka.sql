@@ -49,9 +49,10 @@
 -- Keyword 3    Builtin types                         «BOOLEAN», «DATETIME», «GEOM», «INT*», «FLOAT*», etc.
 -- Keyword 4    Builtin aggregate function names      «Avg», «Count», «GeomMergeAreas», «StringJoinTokens», «Sum», etc.
 -- Keyword 5    Builtin constants                     «CRLF», «E», «FALSE», FLOAT32MAX», «NULL», «PI», «TRUE», etc.
--- Keyword 6    free           	  
+-- Keyword 6    Builtin functions returning TABLE     «ComponentField*», «CoordConvert*», «GeomOverlay*», «TileViewshed*», etc.
+--              using CALL FunctionName() syntax               
 -- Keyword 7    function parameter prefix ?           «@» 
--- 				NB! Style Keyword 7 same as Delimiter 4
+--              NB! Style Keyword 7 same as Delimiter 4
 --              Seems we cannot merge Keyword 7 «@» with Delimiter 4 as ⟨«@», « »⟩ pair 
 -- Keyword 8    Pragma, collation, etc. options       «AVERAGE», «createdname», «gpgpu», «progress», «nokanatype», etc.
 --              NB! Nest Keyword 8 into Delimiter 2 
@@ -99,7 +100,7 @@ EXECUTE WITH (@n TABLE = [States Table])
 --  {{  Delimiter 4 «@[»  «]» / Keyword 7  «@» sample
 FUNCTION f(@[ a crazy param name $ 5@six.com ] TABLE, @not_bigger_than INT32) TABLE AS
 (
-	SELECT Max([Population]) FROM @[ a crazy param name $ 5@six.com ] WHERE [Population] < @not_bigger_than
+  SELECT Max([Population]) FROM @[ a crazy param name $ 5@six.com ] WHERE [Population] < @not_bigger_than
 )
 END
 ;
@@ -135,8 +136,8 @@ SELECT * FROM [Orders] WHERE [datetime] > #01/21/2017 12:05:15# ;
 --  {{  Keywords 8 sample
 -- Delimiter 2 single-quotes nest Keywords 8 (and Operators 1 and Delimiter 5)
 CREATE TABLE [Table] (
-	[name] NVARCHAR,
-	INDEX [name_x] BTREENULL ([name] COLLATE 'en-US, nocase, noaccent')
+  [name] NVARCHAR,
+  INDEX [name_x] BTREENULL ([name] COLLATE 'en-US, nocase, noaccent')
 );
  
 PRAGMA ('gpgpu' = 'aggressive');
@@ -148,24 +149,49 @@ PRAGMA ('gpgpu'='aggressive', 'gpgpu.fp'='32')
 --  {{  Tables from datasources using «::» sample
 
 SELECT 
-	[USA States].[State], 
-	[USA States].[Population], 
-	[City Capitals].[Capital]
+  [USA States].[State], 
+  [USA States].[Population], 
+  [City Capitals].[Capital]
 FROM 
-	[USA]::[States] AS [USA States] 
-	JOIN 
-	[Cities]::[Capitals] AS [City Capitals]
-	ON 
-	[USA States].[State] = [City Capitals].[State]
+  [USA]::[States] AS [USA States] 
+  JOIN 
+  [Cities]::[Capitals] AS [City Capitals]
+  ON 
+  [USA States].[State] = [City Capitals].[State]
 ;
 --}}
 
---  {{  Function sample
+--  {{  Function samples
 -- Pure SQL/9 function
 FUNCTION combine(@p NVARCHAR, @q NVARCHAR) NVARCHAR AS @p & ': ' & @q  END;
 
 -- Function from dll
 FUNCTION F(@x FLOAT64) FLOAT64 AS SCRIPT FILE 'math2.dll' ENTRY 'math.Var.F';
+
+
+-- Inline SCRIPT and FUNCTION in the context of computed field 
+ALTER TABLE t (
+  ADD insertdate DATETIME
+    WITH
+	-- context starts
+	[[
+  -- inline SCRIPT starts
+  SCRIPT funcs ENGINE 'c#' 
+  [[
+    class Script
+    {
+    static System.DateTime F() { return System.DateTime.Now; }
+    }
+  ]];
+  -- inline SCRIPT ends
+  FUNCTION currentdate() DATETIME AS SCRIPT INLINE funcs ENTRY 'Script.F';
+]]
+-- context ends
+-- expression starts
+    AS [[ currentdate() ]]
+-- expression ends
+);
+
 --}}
 
 --  {{  JSON double-quoted values in single-quoted string sample
@@ -196,11 +222,11 @@ CREATE QUERY [Insert_ContinuousColor] (
   DELETE FROM [ContinuousColor Table];
   INSERT INTO [ContinuousColor Table] ( [v], [x], [y] )
   SELECT 
-	[Value]*20 as [v],
-	Trunc([Value]*40*40) div 40 as [x],
-	Trunc([Value]*40*40) mod 40 as [y]
+  [Value]*20 as [v],
+  Trunc([Value]*40*40) div 40 as [x],
+  Trunc([Value]*40*40) mod 40 as [y]
   FROM
-	CALL ValueSequenceRandom(500, 111)
+  CALL ValueSequenceRandom(500, 111)
   ;
 '
 );
