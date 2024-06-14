@@ -3,6 +3,80 @@
 	"version": "1.0",
 	"UDLs": [
 		{
+			"id-name": "SBI Mapper (Dark Mode)",
+			"display-name": "IBM SBI Mapper Extended Rules (Dark Mode)",
+			"version": "20240527",
+			"repository": "",
+			"description": "IBM Sterling B2B Integrator Mapper for Extended Rules (Dark Mode)",
+			"author": "Mayot"
+		},
+		{
+			"id-name": "SBI Mapper",
+			"display-name": "IBM SBI Mapper Extended Rules",
+			"version": "20240527",
+			"repository": "",
+			"description": "IBM Sterling B2B Integrator Mapper for Extended Rules",
+			"author": "Mayot"
+		},
+		{
+			"id-name": "Fortinet_FortiOS_FGT_by_SSavaso_6_4_14",
+			"display-name": "Fortinet Fortigate 6.4.14",
+			"version": "20240203 - Fortigate OS Version 6.4.14",
+			"repository": "https://github.com/ssavaso/Fortinet_FortiOS_FGT",
+			"description": "Fortinet FortiOS for Fortigate",
+			"author": "ssavaso"
+		},
+		{
+			"id-name": "mql5_by_andydoc.udl",
+			"display-name": "mql5",
+			"version": "20240130",
+			"repository": "",
+			"description": "Metaquotes Query Language 5",
+			"author": "andydoc"
+		},
+		{
+			"id-name": "arm32-gas-assembly.udl",
+			"display-name": "arm32 gas assembly",
+			"version": "20231203",
+			"repository": "",
+			"description": "Assembly for arm32, gas variant (for light themes)",
+			"author": "mcesar-rlacruz"
+		},
+		{
+			"id-name": "arm32-gas-assembly_DM.udl",
+			"display-name": "arm32 gas assembly (dark)",
+			"version": "20231203",
+			"repository": "",
+			"description": "Assembly for arm32, gas variant (for dark themes)",
+			"author": "mcesar-rlacruz"
+		},
+		{
+			"id-name": "zenscript",
+			"display-name": "ZenScript",
+			"version": "1.1.0",
+			"repository": "https://github.com/redfire75369/zenscript-npp",
+			"description": " ZenScript Syntax Highlighter for Notepad++",
+			"author": "Redfire",
+			"homepage": "https://github.com/redfire75369/zenscript-npp"
+		},
+		{
+			"id-name": "SIL-Power-Scripts-for-Jira_byHaydenSingleton",
+			"display-name": "SIL",
+			"version": "2023-10-19",
+			"repository": "",
+			"description": "Syntax Highlighting for Simple Issue Language from Power Scripts for Jira by Appfire.",
+			"author": "Hayden Singleton",
+			"homepage": "https://github.com/HaydenSingleton"
+		},
+		{
+			"id-name": "RouterOS Script",
+			"display-name": "RouterOS Script - NieL™",
+			"version": "2023-06-01",
+			"repository": "https://github.com/NieLTechSolution/Notepad-plus-plus/blob/e8422064a97eb7cd372c2b5769f760ce233b5bbc/UDL/RouterOS-Script-NieL%E2%84%A2.xml",
+			"description": "Syntax for the Mikrotik RouterOS Script, it is unofficial UDL to help scripting your mikrotik. Highlighting syntax somewhat helpful of detecting error inputs",
+			"author": "NieL™ TechSolution"
+		},
+		{
 			"id-name": "6502Assembly_byCarlMyerholtz",
 			"display-name": "6502 Assembly",
 			"version": "Sun, 8 Nov 2020 22:01:00 GMT",
@@ -110,6 +184,22 @@
 			"repository": "",
 			"description": "AMP Script",
 			"author": "Patricio Sapir <mailto:psapir@metricsmarketing.com>"
+		},
+		{
+			"id-name": "ansible-play",
+			"display-name": "ansible-play",
+			"version": "1.0",
+			"repository": "",
+			"description": "Ansible play",
+			"author": "kk-at-redhat"
+		},
+		{
+			"id-name": "ansible-play_DM",
+			"display-name": "ansible-play (dark mode)",
+			"version": "1.0",
+			"repository": "",
+			"description": "Ansible play",
+			"author": "kk-at-redhat"
 		},
 		{
 			"id-name": "ANSYS_byEmiklo",
@@ -234,10 +324,10 @@
 		{
 			"id-name": "AutoHotKey_byBrotherGabriel-Marie",
 			"display-name": "AutoHotKey",
-			"version": "Sun, 24 Nov 2013 13:14:07 GMT",
+			"version": "Thu, 21 Sep 2023 10:26 GMT",
 			"repository": "",
 			"description": "AutoHotKey",
-			"author": "Brother Gabriel-Marie <mailto:brgabriel@sspx.org>"
+			"author": "Brother Gabriel-Marie <mailto:brgabriel@sspx.org>; edited by Snowman-25"
 		},
 		{
 			"id-name": "AutoLISPforAutoCAD_MichaelPuckett",
@@ -341,7 +431,8 @@
 			"version": "Fri, 17 Sep 2010 13:40:51 GMT",
 			"repository": "",
 			"description": "Cisco ASA",
-			"author": "Nick Bettison <http://www.linickx.com/contact>"
+			"author": "Nick Bettison",
+			"homepage": "http://www.linickx.com/contact"
 		},
 		{
 			"id-name": "Cisco_COS_byChristophWempe",
@@ -474,6 +565,7 @@
 		{
 			"id-name": "DAX_bySaschaKasper",
 			"display-name": "DAX",
+			"autoCompletion": true,
 			"version": "3.07",
 			"repository": "",
 			"description": "DAX Data Visualization (Microsoft Power BI)",
@@ -735,7 +827,7 @@
 			"version": "Thu, 28 Jan 2010 17:57:57 GMT",
 			"repository": "",
 			"description": "GEDCOM55",
-			"author": " <>"
+			"author": "(anonymous)"
 		},
 		{
 			"id-name": "GIFT-Format_byMatthewKuznia",
@@ -850,6 +942,15 @@
 			"author": "Niels Liisberg <mailto:nli@system-method.com>"
 		},
 		{
+			"id-name": "Icinga_DSL_by_robweber",
+			"display-name": "Icinga DSL",
+			"version": "2024-03-25",
+			"repository": "",
+			"description": "Icinga DSL for use with Icinga2 monitoring solution",
+			"author": "robweber",
+			"homepage": "https://github.com/robweber"
+		},
+		{
 			"id-name": "Icon_byOlegBakharev",
 			"display-name": "Icon",
 			"version": "Sun, 05 Aug 2012 13:52:40 GMT",
@@ -899,11 +1000,13 @@
 		},
 		{
 			"id-name": "interlis_byStefanBurckhardt",
-			"display-name": "interlis",
-			"version": "Wed, 02 Feb 2011 18:21:01 GMT",
+			"display-name": "INTERLIS",
+			"version": "Mon, 11 Dec 2023 19:44:01 GMT",
 			"repository": "",
-			"description": "interlis",
-			"author": "Stefan Burckhardt <mailto:stefan.burckhardt@gmx.ch>"
+			"description": "Syntax Highlightin for INTERLIS",
+			"author": "Stefan Burckhardt <mailto:stefan.burckhardt@sjib.ch>",
+			"homepage": "https://geostandards-ch.github.io/doc_refhb24/#_sonderzeichen_und_reservierte_w%C3%B6rter",
+			"autoCompletion": true
 		},
 		{
 			"id-name": "Javascript-alt_byMarkRamirez",
@@ -951,7 +1054,7 @@
 			"version": "Wed, 28 Dec 2005 21:19:46 GMT",
 			"repository": "",
 			"description": "kiXtart",
-			"author": " <>"
+			"author": "(anonymous)"
 		},
 		{
 			"id-name": "LDIF_by-gambazinho",
@@ -1008,7 +1111,7 @@
 			"version": "Sun, 12 Jan 2014 21:36:46 GMT",
 			"repository": "",
 			"description": "Loyc Expression Syntax (version for dark theme)",
-			"author": "David Piepgrass <qwertie256@gmail.com>"
+			"author": "David Piepgrass <mailto:qwertie256@gmail.com>"
 		},
 		{
 			"id-name": "LS-DYNA_byTimHartman",
@@ -1017,6 +1120,16 @@
 			"repository": "",
 			"description": "LS-DYNA",
 			"author": "Tim Hartman <mailto:tbhartman@vt.edu>"
+		},
+		{
+			"id-name": "LSL_byKimpaTammas",
+			"display-name": "LSL",
+			"version": "Wed, 12 Jun 2024 17:43:48 GMT",
+			"repository": "",
+			"autoCompletion": true,
+			"functionList": true,
+			"description": "Linden Script Language (dark theme version)",
+			"author": "Kimpa Tammas <mailto:kimpa.tammas@free.fr>"
 		},
 		{
 			"id-name": "Magpie_bySilectis.udl",
@@ -1105,7 +1218,7 @@
 			"version": "Tue, 08 Dec 2009 19:48:45 GMT",
 			"repository": "",
 			"description": "mIRC",
-			"author": " <>"
+			"author": "(anonymous)"
 		},
 		{
 			"id-name": "MortScript_byJustusWogerbauer",
@@ -1153,7 +1266,7 @@
 			"version": "Tue, 08 Dec 2009 20:05:55 GMT",
 			"repository": "",
 			"description": "MSL",
-			"author": " <>"
+			"author": "(anonymous)"
 		},
 		{
 			"id-name": "Mumps_byMarcoMedeiros",
@@ -1270,12 +1383,21 @@
 			"author": "Michal M <mailto:michalmoc@centrum.cz>"
 		},
 		{
+			"id-name": "Objective-C++_byLattHsiang",
+			"display-name": "Objective-C++",
+			"version": "2023-06-16",
+			"repository": "https://github.com/skadomsky/Objective-C-Plus-Plus/",
+			"description": "Objective-C++",
+			"author": "Latt Hsiang",
+			"homepage": "https://github.com/skadomsky/"
+		},
+		{
 			"id-name": "OBMM-Script_byAnonymous_in2006",
 			"display-name": "OBMM Sxript",
 			"version": "Sat, 16 Jan 2010 19:16:28 GMT",
 			"repository": "",
 			"description": "OBMM Sxript",
-			"author": " <Posted 09-2006>"
+			"author": "(anonymous: Posted 09-2006)"
 		},
 		{
 			"id-name": "Occam2_byWilliamLuitje",
@@ -1387,7 +1509,7 @@
 			"version": "Sat, 16 Jan 2010 19:25:36 GMT",
 			"repository": "",
 			"description": "PL-SQL",
-			"author": " <Posted 12-2007>"
+			"author": "(anonymous: Posted 12-2007)"
 		},
 		{
 			"id-name": "plm86_by-h2fooko",
@@ -1603,6 +1725,8 @@
 		{
 			"id-name": "RenderMan-RSL_byStefanGustavson",
 			"display-name": "RenderMan Shading Language &amp; RIB",
+			"autoCompletion": "RenderMan-RSL_by-focus_gfx",
+			"autoCompletionAuthor": "focus_gfx",
 			"version": "Mon, 27 Nov 2006 11:09:56 GMT",
 			"repository": "",
 			"description": "RenderMan Shading Language &amp; RIB",
@@ -1615,6 +1739,15 @@
 			"repository": "",
 			"description": "Rules Language",
 			"author": "Nimad Deshpande <mailto:nimad116@gmail.com>"
+		},
+		{
+			"id-name": "Rust_byPaoloFalabella",
+			"display-name": "Rust Language",
+			"version": "12-30-2013",
+			"repository": "https://github.com/pfalabella/Rust-notepadplusplus/blob/master/darkThemeCompatible.xml",
+			"description": "Rust Language",
+			"author": "Paolo Falabella",
+			"homepage": "https://github.com/pfalabella/Rust-notepadplusplus"
 		},
 		{
 			"id-name": "R_by-halpo",
@@ -1665,12 +1798,28 @@
 			"author": "Jeff Foarde <mailto:foarde@gmail.com>"
 		},
 		{
+			"id-name": "SAS_StyleDark_byMatthiasBoege",
+			"display-name": "SAS (dark style) v1",
+			"version": "Sat, 16 Sep 2023 13:48:23 GMT",
+			"repository": "",
+			"description": "SAS for dark NPP styles",
+			"author": "Matthias B&ouml;ge <mailto:matthias@boege-consulting.com>"
+		},
+		{
+			"id-name": "SAS_StyleLight_byMatthiasBoege",
+			"display-name": "SAS (light style) v1",
+			"version": "Sat, 16 Sep 2023 13:48:23 GMT",
+			"repository": "",
+			"description": "SAS for light NPP styles",
+			"author": "Matthias B&ouml;ge <mailto:matthias@boege-consulting.com>"
+		},
+		{
 			"id-name": "Scala_byMihailJP",
 			"display-name": "Scala",
 			"version": "Sat, 19 Jan 2013 10:26:35 GMT",
 			"repository": "",
 			"description": "Scala ",
-			"author": "MihailJP <https://gist.github.com/MihailJP>",
+			"author": "MihailJP",
 			"homepage": "https://gist.github.com/MihailJP/4563140"
 		},
 		{
@@ -1679,7 +1828,8 @@
 			"version": "Thu, 15 Apr 2010 17:22:35 GMT",
 			"repository": "",
 			"description": "Schlumberger Eclipse",
-			"author": "Juan Pedro Bretti Mandarano <http://www.google.com/profiles/juanbretti>"
+			"author": "Juan Pedro Bretti Mandarano",
+			"homepage": "http://www.google.com/profiles/juanbretti"
 		},
 		{
 			"id-name": "ShadeLab_by-redcool007",
@@ -1687,7 +1837,7 @@
 			"version": "Fri, 16 Aug 2013 13:46:37 GMT",
 			"repository": "",
 			"description": "ShadeLab",
-			"author": "<mailto:redcool007@foxmail.com>"
+			"author": "redcool007 <mailto:redcool007@foxmail.com>"
 		},
 		{
 			"id-name": "Siebel_eScript_byGiuseppeGarofalo",
@@ -1732,6 +1882,7 @@
 		{
 			"id-name": "Smartsheet_byKevinDickinson",
 			"display-name": "Smartsheet",
+			"autoCompletion": true,
 			"version": "Fri, 23 Sep 2022 00:16:00 GMT",
 			"repository": "",
 			"description": "Smartsheet",
@@ -2128,6 +2279,15 @@
 			"homepage": "https://stackoverflow.com/a/28702192/5508606"
 		},
 		{
+			"id-name": "HLASM_byAbeKornelis",
+			"display-name": "HLASM",
+			"version": "z16",
+			"repository": "",
+			"description": "HLASM",
+			"author": "Abe Kornelis",
+			"homepage": "https://bixoft.com/english/opcd00.htm"
+		},
+		{
 			"id-name": "AuditCommandLanguage-ACL_byJChen",
 			"display-name": "ACL (Audit Command Language)",
 			"version": "Sun, 26 Jan 2020 22:42:16 GMT",
@@ -2216,8 +2376,8 @@
 		{
 			"id-name": "GraphViz_by-signmotion",
 			"display-name": "GraphViz",
-			"version": "Sun, 26 Jan 2020 22:39:17 GMT",
-			"repository": "https://raw.githubusercontent.com/signmotion/graphviz-syntax-highlighting/master/graphviz-notepad-udl.xml",
+			"version": "Sun, 20 Feb 2024 09:59:00 GMT",
+			"repository": "https://raw.githubusercontent.com/signmotion/graphviz-syntax-highlighting/master/src/graphviz_udl.xml",
 			"description": "GraphViz",
 			"author": "signmotion",
 			"homepage": "https://github.com/signmotion/graphviz-syntax-highlighting"
@@ -2320,6 +2480,7 @@
 		{
 			"id-name": "SciLab_bySamuelGougeon",
 			"display-name": "SciLab (highlighting and autocompletion)",
+			"autoCompletion": "http://fileexchange.scilab.org/toolboxes/140000/6.1/files/scilab.xml",
 			"version": "Sun, 26 Jan 2020 22:42:41 GMT",
 			"repository": "http://fileexchange.scilab.org/toolboxes/140000/6.1/files/UserDefineLang.xml",
 			"description": "SciLab (highlighting and autocompletion)",
@@ -2432,7 +2593,8 @@
 		{
 			"id-name": "Vimscript_by_rdipardo",
 			"display-name": "Vim script",
-			"version": "2023-02-10",
+			"autoCompletion": true,
+			"version": "2023-09-06",
 			"repository": "https://gist.github.com/0b78f62e1ce481ff0d8f8e80cc298ced.git",
 			"description": "User Defined Language for Vim script",
 			"author": "Robert Di Pardo",
@@ -2441,7 +2603,7 @@
 		{
 			"id-name": "Vimscript_Obsidian_by_rdipardo",
 			"display-name": "Vim script (Obsidian)",
-			"version": "2023-02-10",
+			"version": "2023-09-06",
 			"repository": "https://gist.github.com/b8d586e156f543afc84690ac9ddf8e91.git",
 			"description": "User Defined Language for Vim script (based on the Obsidian theme)",
 			"author": "Robert Di Pardo",
@@ -2504,6 +2666,7 @@
 		{
 			"id-name": "vkosuri_lang-robot",
 			"display-name": "Robotframework v0.1",
+			"autoCompletion": "vkosuri-robotframework",
 			"version": "v0.1",
 			"repository": "",
 			"description": "Notepad++ syntax highlighting for Robotframework",
@@ -2513,18 +2676,22 @@
 		{
 			"id-name": "Amiga_E_bydmcoles",
 			"display-name": "Amiga_E",
+			"autoCompletion": true,
 			"version": "Fri, 2 Sep 2022 15:53:00 GMT",
 			"repository": "https://raw.githubusercontent.com/dmcoles/userDefinedLanguages/master/autoCompletions/Amiga_E_bydmcoles.xml",
 			"description": "Amiga E syntax highlighting",
-			"author": "https://github.com/dmcoles"
+			"author": "dmcoles",
+			"homepage": "https://github.com/dmcoles"
 		},
 		{
 			"id-name": "Amiga_E_dark_bydmcoles",
 			"display-name": "Amiga_E_dark",
+			"autoCompletion": true,
 			"version": "Fri, 2 Sep 2022 15:53:00 GMT",
 			"repository": "https://raw.githubusercontent.com/dmcoles/userDefinedLanguages/master/autoCompletions/Amiga_E_dark_bydmcoles.xml",
 			"description": "Amiga E syntax highlighting (dark version)",
-			"author": "https://github.com/dmcoles"
+			"author": "dmcoles",
+			"homepage": "https://github.com/dmcoles"
 		},
 		{
 			"id-name": "xcbasic3_byAlanBourke",
@@ -2591,6 +2758,102 @@
 			"description": "RISC-V UDL File for Notepad++",
 			"author": "Aidan Dempsey",
 			"homepage": "https://github.com/aidan-d123/riscv_npp"
+		},
+		{
+			"id-name": "OSL_byEdawan",
+			"display-name": "OSL",
+			"version": "2023-May-24",
+			"repository": "",
+			"description": "Open Shading Language (OSL) highlighting. Up to date for OSL 1.12",
+			"author": "Edawan"
+		},
+		{
+			"id-name": "UniBASIC_byJustinKobylarz",
+			"display-name": "UniBASIC",
+			"version": "2023-June-22nd",
+			"repository": "",
+			"description": "UniBASIC",
+			"author": "JustinKobylarz"
+		},
+		{
+			"id-name": "Fobagraph_Script_(.bia)_LightMode_by_HelloWorldFR",
+			"display-name": "Fobagraph Script LightMode",
+			"autoCompletion": "fobagraph",
+			"version": "18/10/2023 17:40:00 GMT",
+			"repository": "https://github.com/HelloWorldFR/userDefinedLanguages/blob/master/UDLs/Fobagraph_Script_(.bia)_LightMode_by_HelloWorldFR.xml",
+			"description": "Fobagraph Script for laser machine",
+			"author": "HelloWorldFR",
+			"homepage": "https://github.com/HelloWorldFR/"
+		},
+				{
+			"id-name": "Fobagraph_Script_(.bia)_DarkMode_by_HelloWorldFR",
+			"display-name": "Fobagraph Script DarkMode",
+			"version": "18/10/2023 17:40:00 GMT",
+			"repository": "https://github.com/HelloWorldFR/userDefinedLanguages/blob/master/UDLs/Fobagraph_Script_(.bia)_DarkMode_by_HelloWorldFR.xml",
+			"description": "Fobagraph Script for laser machine",
+			"author": "HelloWorldFR",
+			"homepage": "https://github.com/HelloWorldFR/"
+		},
+		{
+			"id-name": "GCODE-Sinumerik_bySergioGU",
+			"display-name": "GCODE-Sinumerik",
+			"version": "1.0.0",
+			"repository": "",
+			"description": "Siemens Sinumerik CNC GCode syntax highlighting",
+			"author": "Sergio GU"
+		},
+		{
+			"id-name": "OCI_Terraform_by_robin_s_chatterjee",
+			"display-name": "OCI_Terraform",
+			"version": "1.0.0",
+			"repository": "https://github.com/robinchatterjee/userDefinedLanguages/blob/master/UDLs/OCI_Terraform_by_robin_s_chatterjee.xml",
+			"description": "Terraform HCL language with Oracle CLoud Infrastructure OCI  specific  syntax highlighting",
+			"author": "Robin Saikat Chatterjee",
+			"homepage": "https://github.com/robinchatterjee/userDefinedLanguages"
+		},
+		{
+			"id-name": "smali_by_enjoyop",
+			"display-name": "smali",
+			"autoCompletion": true,
+			"version": "16/02/2024 10:50 UTC+3",
+			"repository": "",
+			"description": "Smali Language identification and autocompletion",
+			"author": "Enjoyop"
+			},
+		{
+			"id-name": "CS2_CFG_by_Nightcr4wler",
+			"display-name": "CS2 Config",
+			"version": "1.0.0",
+			"repository": "",
+			"description": "Counter-Strike 2 Config Language. Console Commands and Variables Syntax Highlighting",
+			"author": "Nightcr4wler"
+		},
+		{
+			"id-name": "Curv_byTimAyres",
+			"display-name": "Curv",
+			"version": "1.0.0",
+			"repository": "",
+			"description": "Curv Language Syntax Highlighting",
+			"author": "Tim Ayres",
+                        "homepage": "https://codeberg.org/3DLirious/curv"
+		},
+		{
+			"id-name": "PowerBuilder_DM_byFa0lin",
+			"display-name": "PowerBuilder DarkMode",
+			"version": "2024-Apr-09",
+			"repository": "https://github.com/Fa0lin/powerbuilder-darkmode-udl-notepadplusplus",
+			"description": "PowerBuilder syntax highlighting for dark mode",
+			"author": "Fa0lin",
+			"homepage": "https://github.com/Fa0lin"
+		},
+		{
+			"id-name": "SCL_TIAPortal_dark_byCrankdad.udl",
+			"display-name": "SCL SIEMENS TIA-Portal Darkmode",
+			"version": "1.0.0",
+			"repository": "",
+			"description": "SCL for SIEMENS TIA-Portal syntax highlighting for dark mode",
+			"author": "Crankdad",
+			"homepage": "https://github.com/Crankdad"
 		}
 	]
 }
