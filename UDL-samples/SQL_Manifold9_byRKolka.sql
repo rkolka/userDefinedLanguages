@@ -6,12 +6,14 @@
 
 -- Symbol-like "operators", that do not require surrounding whitespace and can itself act as separators between words.
 -- Operators 1                                        «%», «&», «*», «+», «-», «/», «<», «<=», «<>», «=», «>», «>=», «^», «,», «::», «.», «;», «(», «)»
+% & * + - / < <= <> = > >= ^ , :: . ; { } :
 -- Should «(», «)»  be here, or Delimiters 6?
 -- Should «{», «}»  be here as part of JSON strings
 
 
 -- Word-like "operators", that require surrounding whitespace or separators
 -- Operators 2                                        «AND», «BETWEEN», «BITAND», «LIKE», «MOD», «NOT», «OR», «SPLIT», «UNION», «UNION ALL», «XOR», etc.
+AND BETWEEN BITAND BITNOT BITOR BITXOR CASE CASE WHEN CAST CASTV DIV EXCEPT EXCEPT ALL EXISTS IN INLINE INTERSECT INTERSECT ALL LIKE MOD NOT OR SPLIT TABLE CALL THEN UNION UNION ALL XOR WHEN
 -- some might belong to the keyword list 
 
 
@@ -20,14 +22,21 @@
 -- Delimiter 1  escapeless string quotes                 «@'»  «'»   
 --    NOTE: Operators 1 are nested within quotes to highligth commas inside JSON
 --    NOTE: Should Delimiter 5 be nested within quotes to highligth double-quoted strings and values inside JSON?
+@'C:\no\escape\needed\', 
 -- Delimiter 2  string quotes    with «\» escape         «'»   «'»  
+'London', '\'s-Hertogenbosch'
 -- Delimiter 3  context and expression double-brackets   «[[»  «]]»
+[[ context ]]
 -- Delimiter 4  function parameter brackets              «@[»  «]»
+VALUE @[ a crazy variable name $ 5@six.com ] INT32 = 72;
 -- Delimiter 5  names' brackets (with alternatives)      «[»   «]», «"»   «"», «`»   «`»
+[ a crazy variable name $ 5@six.com ], "a table name", `a table name` 
 -- Delimiter 6  parenthesis (testing, should remove?)    «(»   «)»   
 -- Delimiter 7  date hashes                              «#»   «#»
+#01/21/2017 12:05:15#
 -- Delimiter 8  Expr. eval. and engine directives        «?»   «((EOL))», «!»   «((EOL))»
-
+!manifold
+? DataLength('SQL is Great!')
 
 -- "Comment & Number"
 ---------------------
@@ -45,21 +54,29 @@
 ------------------
 -- Significant or "keywords"
 -- Keyword 1    SQL statements' reserved words        «ALTER TABLE», «AS», «FULL OUTER JOIN», «JOIN», «SELECT», «WHERE», etc.
+ALTER TABLE sometable;
+SELECT * FROM sometable WHERE a like b AND c NOT LIKE d;
 -- Keyword 2    Builtin function names                «Coord*», «Geom*», «String*», «Tile*», etc.
+Abs(-3) + Acos(PI) + BinaryStringBase64
 -- Keyword 3    Builtin types                         «BOOLEAN», «DATETIME», «GEOM», «INT*», «FLOAT*», etc.
+FLOAT32, DATETIME
 -- Keyword 4    Builtin aggregate function names      «Avg», «Count», «GeomMergeAreas», «StringJoinTokens», «Sum», etc.
+Avg([sfgd]), Count(*) as arv, GeomMergeAreas
 -- Keyword 5    Builtin constants                     «CRLF», «E», «FALSE», FLOAT32MAX», «NULL», «PI», «TRUE», etc.
--- Keyword 6    Builtin functions returning TABLE     «ComponentField*», «CoordConvert*», «GeomOverlay*», «TileViewshed*», etc.
+CRLF, FALSE, PI
+-- Keyword 6    Builtin functions returning TABLE     «ComponentField*», «CoordConverter*», «GeomOverlay*», «TileViewshed*», etc.
 --              using CALL FunctionName() syntax               
+CALL CoordConverterMake, CoordDatumParameters
 -- Keyword 7    function parameter prefix ?           «@» 
 --              NB! Style Keyword 7 same as Delimiter 4
 --              Seems we cannot merge Keyword 7 «@» with Delimiter 4 as ⟨«@», « »⟩ pair 
+@simple_variable
 -- Keyword 8    Pragma, collation, etc. options       «AVERAGE», «createdname», «gpgpu», «progress», «nokanatype», etc.
 --              NB! Nest Keyword 8 into Delimiter 2 
-
+'AVERAGE'
 
 -- "Folder & default"
----------------------
+-------------
 
 -- start folding by {{ two opening squiggly braces inside comments
 -- many 
@@ -70,7 +87,6 @@
 
 -- "Samples"
 ------------
-
 
 -- {{  Delimiter 1  «@'»  «'»  sample
 SELECT * FROM [Files] WHERE [Path] like @'C:\no\escape\needed\' ;
@@ -132,7 +148,7 @@ SELECT * FROM [Orders] WHERE [datetime] > #01/21/2017 12:05:15# ;
 -- float64: 14
 -- }} 
  
- 
+
 --  {{  Keywords 8 sample
 -- Delimiter 2 single-quotes nest Keywords 8 (and Operators 1 and Delimiter 5)
 CREATE TABLE [Table] (
@@ -231,3 +247,14 @@ CREATE QUERY [Insert_ContinuousColor] (
 '
 );
 --}}
+trunc(luliuil) 
+  DELETE FROM [ContinuousColor Table]; [dwqwqdqw] qw q efwefw"fwefew"[wefewf]
+  INSERT INTO [ContinuousColor Table] ( [v], [x], [y] )
+  SELECT 
+  [Value]*20 as [v],
+  Trunc([Value]*40*40) div 40 as [x],
+  Trunc([Value]*40*40) mod 40 as [y]
+  FROM
+  CALL ValueSequenceRandom(500, 111)
+  trunc[wefwef]
+  ;
