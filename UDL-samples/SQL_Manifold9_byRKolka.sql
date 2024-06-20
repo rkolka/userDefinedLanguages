@@ -1,81 +1,136 @@
 
--- Describing Manifold 9's SQL syntax in Notepad++ UDL 2.1 (User Defined Language) terms.
+-- Describing Manifold 9's SQL syntax in Notepad++ UDL 2.1 (User Defined Language) style terms.
 
--- "Operators & Delimiters"
----------------------------
+-- Default
+----------------------------
+-- Default text style is only used for unquoted identifiers eg
+a_table_name
+a_column_name
+a_function_name
 
--- Symbol-like "operators", that do not require surrounding whitespace and can itself act as separators between words.
--- Operators 1                                        «%», «&», «*», «+», «-», «/», «<», «<=», «<>», «=», «>», «>=», «^», «,», «::», «.», «;», «(», «)»
+-- Comments
+----------------------------
+-- This is an example of comment
+
+-- Numbers
+----------------------------
+1 2 3456 23.454 .023 1e9
+
+
+-- Keywords
+----------------------------
+
+-- Keywords1 - SQl keywords
+CREATE 
+DROP
+ALTER
+SELECT 
+FROM
+WHERE
+ORDER BY
+
+-- Keywords2 - Builtin scalar functions
+-- Builtin scalar functions are styled as violet
+Abs
+BinaryStringBase64
+Cos
+VectorDot
+
+-- Keywords3 - SQL types 
+-- Manifold 9 SQL types are styled as magenta
+BOOLEAN 
+DATETIME
+GEOM
+UINT64X3
+
+-- Keywords4 - Builtin aggregate functions
+-- Builtin aggregate functions are styled as violet and bold
+Avg
+Count
+GeomMergeAreas
+Min
+Sum
+
+-- Keywords5 - Builtin constants
+-- Builtin aggregate functions are styled as violet and bold
+CRLF
+FLOAT64MAX
+NULL
+PI
+
+-- Keywords6 - Builtin functions returning TABLE
+-- Builtin aggregate functions are those requring a CALL 
+-- Builtin aggregate functions are styled as violet and bold underlined
+CALL ComponentFieldDrawing
+CALL ValueSequenceRandom
+
+
+-- Keywords7 - variable names beginning with a @
+-- see also Delimiters4
+@var
+@param
+
+-- Keywords8 - special strings used for pragmaa, collation options, etc.
+-- Styled as strings but underlined
+'createdname'
+'auto'
+'progress.percentnext'
+
+
+
+-- Operators
+----------------------------
+-- Symbol-like "operators", that do not require surrounding whitespace and 
+-- can itself act as separators between words.
+-- Operators 1
 % & * + - / < <= <> = > >= ^ , :: . ; { } :
--- Should «(», «)»  be here, or Delimiters 6?
--- Should «{», «}»  be here as part of JSON strings
-
-
 -- Word-like "operators", that require surrounding whitespace or separators
--- Operators 2                                        «AND», «BETWEEN», «BITAND», «LIKE», «MOD», «NOT», «OR», «SPLIT», «UNION», «UNION ALL», «XOR», etc.
-AND BETWEEN BITAND BITNOT BITOR BITXOR CASE CASE WHEN CAST CASTV DIV EXCEPT EXCEPT ALL EXISTS IN INLINE INTERSECT INTERSECT ALL LIKE MOD NOT OR SPLIT TABLE CALL THEN UNION UNION ALL XOR WHEN
--- some might belong to the keyword list 
+-- Operators 2                                        
+AND
+BETWEEN
+BITAND
+INTERSECT ALL
+LIKE
+-- (some word-like operators might belong to the keyword list)
 
 
 -- Delimiter pairs
--- Order of {1, 2} and {3, 4, 5} is important
--- Delimiter 1  escapeless string quotes                 «@'»  «'»   
---    NOTE: Operators 1 are nested within quotes to highligth commas inside JSON
---    NOTE: Should Delimiter 5 be nested within quotes to highligth double-quoted strings and values inside JSON?
-@'C:\no\escape\needed\', 
--- Delimiter 2  string quotes    with «\» escape         «'»   «'»  
-'London', '\'s-Hertogenbosch'
--- Delimiter 3  context and expression double-brackets   «[[»  «]]»
+----------------------------
+--    NOTE: Order of {1, 2} and {3, 4, 5} is important
+
+-- Delimiters1 - escapeless strings
+@'London'
+@'C:\no\escape\needed\'
+
+-- Delimiters2 - strings
+'London'
+'\'s-Hertogenbosch'
+
+-- Delimiters3 - context and expression double-angle-brackets
 [[ context ]]
--- Delimiter 4  function parameter brackets              «@[»  «]»
-VALUE @[ a crazy variable name $ 5@six.com ] INT32 = 72;
--- Delimiter 5  names' brackets (with alternatives)      «[»   «]», «"»   «"», «`»   «`»
-[ a crazy variable name $ 5@six.com ], "a table name", `a table name` 
--- Delimiter 6  parenthesis (testing, should remove?)    «(»   «)»   
--- Delimiter 7  date hashes                              «#»   «#»
+
+-- Delimiters4 - variable names beginning with @ in angle-brackets 
+@[ a crazy variable name $ 5@six.com ]
+
+-- Delimiters5 - SQL table, column, etc. names brackets with alternatives
+[a table name]
+"a table name"
+`a table name` 
+[geom]
+[ID]
+
+-- Delimiters6 - parenthesis (testing, should remove?)    «(»   «)»   
+
+-- Delimiters7 - datetime literals
 #01/21/2017 12:05:15#
--- Delimiter 8  Expr. eval. and engine directives        «?»   «((EOL))», «!»   «((EOL))»
+
+
+-- Delimiters8 - Expression evaluation and SQL engine directives
+?DataLength('SQL is Great!')
 !manifold
-? DataLength('SQL is Great!')
+!fullfetch
 
--- "Comment & Number"
----------------------
-
--- Line comment start double-dash                        «--»
--- Line comment can start anywhere and continues til the end of line
-
--- Number formats
--- decimal separator dot                                 «.»
--- no further variants?
--- ?? some cases 32 in FLOAT32 is styled as number?!!!
-
-
--- "Keyword lists"
-------------------
--- Significant or "keywords"
--- Keyword 1    SQL statements' reserved words        «ALTER TABLE», «AS», «FULL OUTER JOIN», «JOIN», «SELECT», «WHERE», etc.
-ALTER TABLE sometable;
-SELECT * FROM sometable WHERE a like b AND c NOT LIKE d;
--- Keyword 2    Builtin function names                «Coord*», «Geom*», «String*», «Tile*», etc.
-Abs(-3) + Acos(PI) + BinaryStringBase64
--- Keyword 3    Builtin types                         «BOOLEAN», «DATETIME», «GEOM», «INT*», «FLOAT*», etc.
-FLOAT32, DATETIME
--- Keyword 4    Builtin aggregate function names      «Avg», «Count», «GeomMergeAreas», «StringJoinTokens», «Sum», etc.
-Avg([sfgd]), Count(*) as arv, GeomMergeAreas
--- Keyword 5    Builtin constants                     «CRLF», «E», «FALSE», FLOAT32MAX», «NULL», «PI», «TRUE», etc.
-CRLF, FALSE, PI
--- Keyword 6    Builtin functions returning TABLE     «ComponentField*», «CoordConverter*», «GeomOverlay*», «TileViewshed*», etc.
---              using CALL FunctionName() syntax               
-CALL CoordConverterMake, CoordDatumParameters
--- Keyword 7    function parameter prefix ?           «@» 
---              NB! Style Keyword 7 same as Delimiter 4
---              Seems we cannot merge Keyword 7 «@» with Delimiter 4 as ⟨«@», « »⟩ pair 
-@simple_variable
--- Keyword 8    Pragma, collation, etc. options       «AVERAGE», «createdname», «gpgpu», «progress», «nokanatype», etc.
---              NB! Nest Keyword 8 into Delimiter 2 
-'AVERAGE'
-
--- "Folder & default"
+-- Code folding
 -------------
 
 -- start folding by {{ two opening squiggly braces inside comments
@@ -85,7 +140,7 @@ CALL CoordConverterMake, CoordDatumParameters
 -- end folding by }} two closing squiggly braces inside comments  
 
 
--- "Samples"
+-- Examples
 ------------
 
 -- {{  Delimiter 1  «@'»  «'»  sample
@@ -111,7 +166,7 @@ EXECUTE WITH (@n TABLE = [States Table])
 ]]
 ;
 -- }} 
-
+sdw
 
 --  {{  Delimiter 4 «@[»  «]» / Keyword 7  «@» sample
 FUNCTION f(@[ a crazy param name $ 5@six.com ] TABLE, @not_bigger_than INT32) TABLE AS
@@ -191,18 +246,18 @@ ALTER TABLE t (
     WITH
 	-- context starts
 	[[
-  -- inline SCRIPT starts
-  SCRIPT funcs ENGINE 'c#' 
-  [[
-    class Script
-    {
-    static System.DateTime F() { return System.DateTime.Now; }
-    }
-  ]];
-  -- inline SCRIPT ends
-  FUNCTION currentdate() DATETIME AS SCRIPT INLINE funcs ENTRY 'Script.F';
-]]
--- context ends
+	SCRIPT funcs ENGINE 'c#' 
+		-- inline SCRIPT starts
+		[[
+		class Script
+		{
+			static System.DateTime F() { return System.DateTime.Now; }
+		}
+		]];
+		-- inline SCRIPT ends
+	FUNCTION currentdate() DATETIME AS SCRIPT INLINE funcs ENTRY 'Script.F';
+	]]
+	-- context ends
 -- expression starts
     AS [[ currentdate() ]]
 -- expression ends
@@ -247,8 +302,8 @@ CREATE QUERY [Insert_ContinuousColor] (
 '
 );
 --}}
-trunc(luliuil) 
-  DELETE FROM [ContinuousColor Table]; [dwqwqdqw] qw q efwefw"fwefew"[wefewf]
+
+  DELETE FROM [ContinuousColor Table];
   INSERT INTO [ContinuousColor Table] ( [v], [x], [y] )
   SELECT 
   [Value]*20 as [v],
@@ -256,5 +311,4 @@ trunc(luliuil)
   Trunc([Value]*40*40) mod 40 as [y]
   FROM
   CALL ValueSequenceRandom(500, 111)
-  trunc[wefwef]
   ;
