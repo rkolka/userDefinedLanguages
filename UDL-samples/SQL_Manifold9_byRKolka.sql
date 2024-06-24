@@ -1,5 +1,24 @@
 
--- Describing Manifold 9's SQL syntax in Notepad++ UDL 2.1 (User Defined Language) style terms.
+-- Manifold 9's SQL syntax highlighting in Notepad++ UDL 2.1
+
+
+Solarized Dark colors https://en.wikipedia.org/wiki/Solarized
+Base03  "002B36"    0  43  54  UNUSED background tone (dark theme)
+Base02  "073642"    7  54  66  UNUSED background tone (dark theme)
+Base01  "586E75"   88 110 117  -- comments
+Base00  "657B83"  101 123 131  default 
+Base0   "839496"  131 148 150  UNUSED
+Base1   "93A1A1"  147 161 161  [table_name], #2024-05-23#, 123, &, ()      
+Base2   "EEE8D5"  238 232 213  UNUSED background tone (light theme) 
+Base3   "FDF6E3"  253 246 227  UNUSED background tone (light theme) 
+Yellow  "B58900"  181 137   0  'string' 
+Orange  "CB4B16"  203  75  22  @variable_name
+Red     "DC322F"  220  50  47  !fullfetch 
+Magenta "D33682"  211  54 130  INT32
+Violet  "6C71C4"  108 113 196  TileRenderSingleWindow, Avg, FALSE, CALL
+Blue    "268BD2"   38 139 210  SELECT
+Cyan    "2AA198"   42 161 152  UNUSED
+Green   "859900"  133 153   0  [[ context ]]
 
 -- Default
 ----------------------------
@@ -20,31 +39,28 @@ a_function_name
 -- Keywords
 ----------------------------
 
--- Keywords1 - SQl keywords
-CREATE 
+-- Keywords1 - SQL keywords
+CREATE
 DROP
 ALTER
-SELECT 
+SELECT
 FROM
 WHERE
 ORDER BY
 
 -- Keywords2 - Builtin scalar functions
--- Builtin scalar functions are styled as violet
 Abs
 BinaryStringBase64
 Cos
 VectorDot
 
 -- Keywords3 - SQL types 
--- Manifold 9 SQL types are styled as magenta
-BOOLEAN 
+BOOLEAN
 DATETIME
 GEOM
 UINT64X3
 
 -- Keywords4 - Builtin aggregate functions
--- Builtin aggregate functions are styled as violet and bold
 Avg
 Count
 GeomMergeAreas
@@ -52,52 +68,29 @@ Min
 Sum
 
 -- Keywords5 - Builtin constants
--- Builtin aggregate functions are styled as violet and bold
 CRLF
 FLOAT64MAX
 NULL
 PI
 
--- Keywords6 - Builtin functions returning TABLE
--- Builtin aggregate functions are those requring a CALL 
--- Builtin aggregate functions are styled as violet and bold underlined
+-- Keywords6 - Builtin functions returning TABLE requring a CALL 
 CALL ComponentFieldDrawing
 CALL ValueSequenceRandom
 
 
 -- Keywords7 - variable names beginning with a @
--- see also Delimiters4
-@var
-@param
+@variable
+-- Delimiters4 - variable names beginning with a @
+@[ a crazy variable name $ 5@six.com ]
 
--- Keywords8 - special strings used for pragmaa, collation options, etc.
+-- Keywords8 - special strings used for pragma, collation options, etc.
 -- Styled as strings but underlined
 'createdname'
 'auto'
-'progress.percentnext'
-
-
-
--- Operators
-----------------------------
--- Symbol-like "operators", that do not require surrounding whitespace and 
--- can itself act as separators between words.
--- Operators 1
-% & * + - / < <= <> = > >= ^ , :: . ; { } :
--- Word-like "operators", that require surrounding whitespace or separators
--- Operators 2                                        
-AND
-BETWEEN
-BITAND
-INTERSECT ALL
-LIKE
--- (some word-like operators might belong to the keyword list)
 
 
 -- Delimiter pairs
 ----------------------------
---    NOTE: Order of {1, 2} and {3, 4, 5} is important
-
 -- Delimiters1 - escapeless strings
 @'London'
 @'C:\no\escape\needed\'
@@ -109,17 +102,13 @@ LIKE
 -- Delimiters3 - context and expression double-angle-brackets
 [[ context ]]
 
--- Delimiters4 - variable names beginning with @ in angle-brackets 
-@[ a crazy variable name $ 5@six.com ]
-
--- Delimiters5 - SQL table, column, etc. names brackets with alternatives
+-- Delimiters5 - SQL table, column, etc. name in brackets
 [a table name]
 "a table name"
-`a table name` 
-[geom]
-[ID]
+`a table name`
 
--- Delimiters6 - parenthesis (testing, should remove?)    «(»   «)»   
+-- Delimiters6 - 
+UNUSED 
 
 -- Delimiters7 - datetime literals
 #01/21/2017 12:05:15#
@@ -129,6 +118,18 @@ LIKE
 ?DataLength('SQL is Great!')
 !manifold
 !fullfetch
+
+
+-- Operators
+----------------------------
+-- Symbol-like "operators", that do not require surrounding whitespace and 
+-- can itself act as separators between words.
+-- Operators 1
+% & * + - / < <= <> = > >= ^ , :: . ; { } :
+
+-- Word-like "operators", that require surrounding whitespace or separators
+-- Operators 2                                        
+UNUSED 
 
 -- Code folding
 -------------
@@ -140,35 +141,34 @@ LIKE
 -- end folding by }} two closing squiggly braces inside comments  
 
 
--- Examples
+-- More examples
 ------------
 
--- {{  Delimiter 1  «@'»  «'»  sample
+-- {{  Delimiter 1 @' '  sample
 SELECT * FROM [Files] WHERE [Path] like @'C:\no\escape\needed\' ;
 SELECT * FROM [Orders] WHERE [City] = @'London' ;
 -- }}
 
 
--- {{  Delimiter 2  «'»   «'»  sample
+-- {{  Delimiter 2  ' '  sample
 SELECT * FROM [Orders] WHERE [City] = 'London' ;
 SELECT * FROM [Orders] WHERE [City] = '\'s-Hertogenbosch' ;
 -- }}
 
 
---  {{  Delimiter 3  «[[»  «]]»  sample
+--  {{  Delimiter 3  [[ ]]  sample
 EXECUTE WITH (@x INT32 = 2, @y INT32 = 20) [[ INSERT INTO dbo.t (a, b) VALUES (@x@, @y@) ]] ON [sql];
 
-EXECUTE WITH (@n TABLE = [States Table])  
+EXECUTE WITH (@n TABLE = [States Table])
 [[
     FUNCTION f(@T TABLE) TABLE AS
       (SELECT Max([Population]) FROM @T) END;
     TABLE CALL f(@n);
 ]]
 ;
--- }} 
-sdw
+-- }}
 
---  {{  Delimiter 4 «@[»  «]» / Keyword 7  «@» sample
+--  {{  Delimiter 4 - @[ ],  Keyword 7 - @ sample
 FUNCTION f(@[ a crazy param name $ 5@six.com ] TABLE, @not_bigger_than INT32) TABLE AS
 (
   SELECT Max([Population]) FROM @[ a crazy param name $ 5@six.com ] WHERE [Population] < @not_bigger_than
@@ -178,21 +178,21 @@ END
 -- }} 
 
 
---  {{  Delimiter 5 «[» «]», «`» «`», «"» «"»  sample
+--  {{  Delimiter 5 - [ ], ` `, " " sample
 SELECT * FROM [2016 Roads];
 SELECT * FROM `2016 Roads`;
 SELECT * FROM "2016 Roads";
 SELECT [Population 1990] FROM [Countries];
 SELECT "Population 1990" FROM `Countries`;
--- }} 
+-- }}
 
 
---  {{  Delimiter 7 «#» «#» sample
+--  {{  Delimiter 7 # # sample
 SELECT * FROM [Orders] WHERE [datetime] > #01/21/2017 12:05:15# ;
--- }} 
+-- }}
 
 
---  {{  Delimiter 8 «!», «?» sample
+--  {{  Delimiter 8 !, ? sample
 !fullfetch
 !native
 !manifold
@@ -205,7 +205,7 @@ SELECT * FROM [Orders] WHERE [datetime] > #01/21/2017 12:05:15# ;
  
 
 --  {{  Keywords 8 sample
--- Delimiter 2 single-quotes nest Keywords 8 (and Operators 1 and Delimiter 5)
+--  Keywords 8 are also active (nested) in strings (Delimiter 2) 
 CREATE TABLE [Table] (
   [name] NVARCHAR,
   INDEX [name_x] BTREENULL ([name] COLLATE 'en-US, nocase, noaccent')
@@ -219,15 +219,15 @@ PRAGMA ('gpgpu'='aggressive', 'gpgpu.fp'='32')
 
 --  {{  Tables from datasources using «::» sample
 
-SELECT 
-  [USA States].[State], 
-  [USA States].[Population], 
+SELECT
+  [USA States].[State],
+  [USA States].[Population],
   [City Capitals].[Capital]
-FROM 
-  [USA]::[States] AS [USA States] 
-  JOIN 
+FROM
+  [USA]::[States] AS [USA States]
+  JOIN
   [Cities]::[Capitals] AS [City Capitals]
-  ON 
+  ON
   [USA States].[State] = [City Capitals].[State]
 ;
 --}}
@@ -244,20 +244,20 @@ FUNCTION F(@x FLOAT64) FLOAT64 AS SCRIPT FILE 'math2.dll' ENTRY 'math.Var.F';
 ALTER TABLE t (
   ADD insertdate DATETIME
     WITH
-	-- context starts
-	[[
-	SCRIPT funcs ENGINE 'c#' 
-		-- inline SCRIPT starts
-		[[
-		class Script
-		{
-			static System.DateTime F() { return System.DateTime.Now; }
-		}
-		]];
-		-- inline SCRIPT ends
-	FUNCTION currentdate() DATETIME AS SCRIPT INLINE funcs ENTRY 'Script.F';
-	]]
-	-- context ends
+  -- context starts
+  [[
+  SCRIPT funcs ENGINE 'c#' 
+    -- inline SCRIPT starts
+    [[
+    class Script
+    {
+      static System.DateTime F() { return System.DateTime.Now; }
+    }
+    ]];
+    -- inline SCRIPT ends
+  FUNCTION currentdate() DATETIME AS SCRIPT INLINE funcs ENTRY 'Script.F';
+  ]]
+  -- context ends
 -- expression starts
     AS [[ currentdate() ]]
 -- expression ends
@@ -266,7 +266,6 @@ ALTER TABLE t (
 --}}
 
 --  {{  JSON double-quoted values in single-quoted string sample
--- Note: Delimiter 2 single-quotes nest Delimiter 5 and Operators 1 (and Keywords 8)
 CREATE TABLE [ContinuousColor Table] (
   [mfd_id] INT64,
   [Geom] GEOM,
@@ -303,12 +302,29 @@ CREATE QUERY [Insert_ContinuousColor] (
 );
 --}}
 
-  DELETE FROM [ContinuousColor Table];
-  INSERT INTO [ContinuousColor Table] ( [v], [x], [y] )
-  SELECT 
+DELETE FROM [ContinuousColor Table];
+INSERT INTO [ContinuousColor Table] ( [v], [x], [y] )
+SELECT 
   [Value]*20 as [v],
   Trunc([Value]*40*40) div 40 as [x],
   Trunc([Value]*40*40) mod 40 as [y]
-  FROM
+FROM
   CALL ValueSequenceRandom(500, 111)
-  ;
+;
+
+SELECT 
+  parcel, 
+  SPLIT (COLLECT building, area ORDER BY area DESC FETCH 3)
+FROM
+(
+  SELECT 
+    p.[mfd_id] AS [parcel], 
+    b.mfd_id AS building,
+    GeomArea(b.[geom (i)], 0) AS area
+  FROM 
+    [parcels Table] AS p 
+    INNER JOIN 
+    [buildings Table] AS b
+    ON GeomContains(p.[geom (i)], b.[geom (i)], 0)
+)
+GROUP BY parcel;
